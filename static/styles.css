@@ -1,0 +1,143 @@
+/*
+********************************
+
+NAVBAR
+
+********************************
+*/
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+
+nav .navbar-brand .white
+{
+    color: #ffffff;
+}
+
+
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.navbar-darkblue
+{
+    background-color: #00008B;
+}
+
+.nav-item>a:hover {
+    color: black;
+}
+.nav-link {
+    color: white;
+}
+
+/*
+********************************
+
+NAVBAR END
+
+********************************
+*/
+
+/*
+********************************
+
+MAIN.HTML HOLDS THE STYLE FOR
+THE IMAGING AND THE OVERALL CONTAINER
+
+********************************
+*/
+
+
+.container-fluid{
+    overflow: hidden;
+}
+/*
+********************************
+
+MAIN.HTML END
+
+********************************
+*/
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+/*
+********************************
+
+HOME.HTML END
+
+********************************
+*/
+
+.AboutText
+{
+    color: grey;
+}
+
+h1
+{
+    font-size: x-large;
+    font-weight: 600;
+    color:black;
+}
+
+p
+{
+    color:black;
+}
+
+img {
+    object-fit: cover;
+}
+
+.classWithPad { 
+    margin: 55px; 
+    padding: -20px;
+}
+
+.classWithrowPad { 
+    margin: 55px; 
+}

@@ -1,0 +1,192 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+  <title>Form</title>
+  <h1>Original Text: </h1>
+  <p> {{ text }} </p>
+
+  <div>
+    <h1>Original Image: </h1>
+		<img src="{{ filename }}">
+	</div>
+
+  <br>
+  <br>
+  
+  <div>
+    <form action="/information/{{id}}" method="post">
+
+      <h1>Publication info: </h1>
+      <br>
+
+
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="month">Month Posted:</label>
+          <input type="number" class="form-control" id="month" name="month" >
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="day">Day Posted:</label>
+          <input type="number" class="form-control" id="day" name="day" >
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="year">Year Posted:</label>
+          <input type="number" class="form-control" id="year" name="year" >
+        </div>
+      </div>
+
+
+      <div class="form-row">
+        <div class="col-md-4 mb-3"></div>
+        <div class="col-md-4 mb-3">
+          <div>
+            <select class = "form-control", name = "newspaper">
+              <option disabled selected value="">newspaper</option>
+              {%for newspaper in newspapers %}
+                <option value = "{{newspaper}}">{{newspaper}}</option>
+              {%endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3"></div>
+      </div>
+      <br>
+
+      <h1>Enslaver info: </h1>
+      <br>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="poster">Name of Poster:</label>
+          <input type="text" class="form-control" id="poster" name="poster">
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="enslaver">Enslaver Name:</label>
+          <input type="text" class="form-control" id="enslaver" name="enslaver">
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="location">Location:</label>
+          <input type="text" class="form-control" id="location" name="location">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="comments_poster">Other Comments:</label>
+        <textarea class="form-control" id="comments_poster" name="comments_poster"rows="5" cols="40"></textarea>
+      </div>
+      
+      
+
+      <br>
+      <h1>Runaway info: </h1>
+      <br>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="name">Runaway Name:</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="other_name">Other Alias:</label>
+          <input type="text" class="form-control" id="other_name" name="other_name">
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="reward">Reward:</label>
+          <input type="text" class="form-control" id="reward" name="reward">
+        </div>
+      </div>
+      <br>
+
+      <div class="form-row">
+        <div class="col-6">
+          <label for="race">Racial Category:</label>
+          <input type="text" class="form-control" id="race" name="race">
+        </div>
+        <div class="col-6">
+          <label for="ethnicity">Ethnicity:</label>
+          <input type="text" class="form-control" id="ethnicity" name="ethnicity">
+        </div>
+      </div>
+
+      <br>
+      <div class="form-row">
+        <div class="col-6">
+          <label for="literacy">Literacy Status:</label>
+          <input type="text" class="form-control" id="literacy" name="literacy">
+        </div>
+        <div class="col-6">
+          <label for="language">Language Skills:</label>
+          <input type="text" class="form-control" id="language" name="language">
+        </div>
+      </div>
+
+
+      <br>
+      <div class="form-row">
+        <div class="col-6">
+          <label for="methodofescape">Method of Escape:</label>
+          <textarea class="form-control" id="methodofescape"  name="methodofescape" rows="5" cols="40"></textarea>
+        </div>
+        <div class="col-6">
+          <label for="escapelocation">Escaped From:</label>
+          <textarea class="form-control" id="escapelocation" name="escapelocation" rows="5" cols="40"></textarea>
+        </div>
+      </div>
+
+      <br>
+      <div class="form-row">
+        <div class="col-6">
+          <label for="personality">Personality:</label>
+          <textarea class="form-control" id="personality" name="personality" rows="5" cols="40"></textarea>
+        </div>
+        <div class="col-6">
+          <label for="clothing">Clothing:</label>
+          <textarea class="form-control" id="clothing" name="clothing" rows="5" cols="40"></textarea>
+        </div>
+      </div>
+
+      <br>
+      <div class="form-row">
+        <div class="col-12 col-md-8">
+          <label for="physical">Physcial Description:</label>
+          <textarea class="form-control" id="physical" name="physical" rows="5" cols="40"></textarea>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" value="True" id="branded">
+            <label class="form-check-label" for="branded">
+              Indication of Branding
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="radio" value="False" id="nonbranded" checked>
+            <label class="form-check-label" for="nonbranded">
+              No Branding indication
+            </label>
+          </div>
+        </div>
+      </div>
+      <br>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" value="Male" id="branded">
+        <label class="form-check-label" for="branded">
+          Male
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="gender" value="Female" id="nonbranded" checked>
+        <label class="form-check-label" for="nonbranded">
+          Female
+        </label>
+      
+      <div class="form-group">
+        <label for="other_comment">Other Comments on Runaway:</label>
+        <textarea class="form-control" id="other_comment" name="other_comment"rows="5" cols="40"></textarea>
+      </div>
+      
+
+      <button type="submit" name="btn"> Submit </button>
+
+    </form>
+  </div>
+
+{% endblock %}

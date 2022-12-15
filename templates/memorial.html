@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block main %}  
+    <h1> Some of the names of those Lost to the Slave Trade</h1>
+    3
+    <br>
+
+    {% for name in names %}
+        <p>{{ name }}</p>
+    {% endfor %}
+
+{% endblock %}

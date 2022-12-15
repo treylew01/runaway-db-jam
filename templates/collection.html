@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block main %}
+	<div>
+		<img src="{{ url }}">
+	</div>
+
+    <div>
+        <form action="/collection/{{id}}" method="post">
+            <br>
+            <label for="freeform">Translate the text:</label>
+            <br>
+            <br>
+            <textarea id="freeform" name="freeform" rows="10" cols="100"> {{ raw_text }} </textarea>
+            <br>
+            <br>
+            <button type="submit" name="btn" value = {{ filename }}> Submit </button>
+        </form>
+    </div>
+
+{% endblock %}
